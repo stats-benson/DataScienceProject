@@ -12,7 +12,7 @@ To accomplish these goals, we used several datasets, one on average monthly temp
 
 ### Methods and Results
 
-For this project, there were two main difficulties with the data. The first is that the death dataset was clamped to 2012 and 2014, which caused a huge lack of accuracy as we can only extrapolate two years of data from every dataset. The other challenge is that we are trying to present 3 categories of data on one visualization. For each visualization we need to showcase the geographical information alongside 2 other columns, for example, alcohol consumption and average temperature in the state. We both came up with different ways of showing this each with their own merits. Now we will each touch up on our separate processes:
+For this project, there were two main difficulties with the data. The first is that the death dataset was clamped to 2012 and 2014, which could hurt our generalizability as we can only use two years of data from every dataset. The other challenge is that we are trying to present 3 categories of data on one visualization. For each visualization we need to showcase the geographical information alongside 2 other columns, for example, alcohol consumption and average temperature in the state. We both came up with different ways of showing this each with their own merits. Now we will each touch up on our separate processes:
 
 # Andrew's questions: 
 
