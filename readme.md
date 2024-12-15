@@ -1,8 +1,5 @@
-### Homework 09: Project Part II: Analysis write-up
-
+## Drunk Driving Deaths Compared to Alcohol Consumption and Weather History
 Group Members: Andrew Tate and Jacob Benson
-
-Title: Drunk Driving Deaths Compared to Alcohol Consumption and Weather History
 
 ### Introduction
 
