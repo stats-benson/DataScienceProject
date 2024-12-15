@@ -18,7 +18,7 @@ To accomplish these goals, we used several datasets, one on average monthly temp
 
 For this project, there were two main difficulties with the data. The first is that the death dataset was clamped to 2012 and 2014, which caused a huge lack of accuracy as we can only extrapolate two years of data from every dataset. The other challenge is that we are trying to present 3 categories of data on one visualization. For each visualization we need to showcase the geographical information alongside 2 other columns, for example, alcohol consumption and average temperature in the state. We both came up with different ways of showing this each with their own merits. Now we will each touch up on our separate processes:
 
-Andrew
+# Andrew's questions: 
 
 I thought the best place to start was to create a large dataframe that aggregates all of the data from the 3 dataframes, discarding the ones I don’t need. I filtered the alcohol preference dataframe to 2012-2014 and created a new dataframe containing a “State” “Year” and “Death\_Rate\_Per\_100k” columns from the dui dataframe. I inner-joined these dataframes together. I then created a lambda function to calculate a “Most Popular Alcohol” column for each state and each year. As shown in the visualization below utilizing plotly’s choropleth:   
 
@@ -40,12 +40,15 @@ Here we can see a few interesting things. With the first visualization, we can s
 
 [https://colab.research.google.com/drive/1fI3uQZIWGrrQOJR5gxRvc70\_AdeTk6UK?usp=sharing](https://colab.research.google.com/drive/1fI3uQZIWGrrQOJR5gxRvc70_AdeTk6UK?usp=sharing)
 
-Jacob
+# Jacob's questions:
 
 I first took the data from the two datasets, merged them together, and filtered our drinking datasets for the years 2012, and 2014 (the only years provided for driving death statistics. I then created a simple choropleth for the prevalence of drinking in 2014 by states.  
- ![][image6]  
+
+
+
 We see some general trends of drinking, with lesser drinking in the “Bible Belt” and especially in Utah.   
 Next I wanted a good way to display two quantitative variables on a locations map by state, which I first thought to do opacity of color, but then opted to go with a bubble map, with size of the bubble in each state relating to driving deaths, and the color pertaining to the level of alcohol drinking in that particular state. My first challenge was West Virginia, which had a comma separating the state name followed by a latitude longitude pair, so I made a function to remove that comma, which I could then obtain latitude and longitude pairs for the central location for each state. 
+
 
 Next I used a gradient function that I found on kaggle, and edited it to include the bounds of my data length, and plotted a bubble plot for alcohol consumption vs deaths in 2014\. 
 
@@ -112,8 +115,8 @@ Some potential errors and confounding variables, and potential future questions:
 
 References:
 
-Linze.yu (2022) Alcohol consumption us, Kaggle. Available at: https://www.kaggle.com/datasets/linzey/alcohol-consumption-us (Accessed: 05 December 2024).
+Linze.yu (2022) Alcohol consumption us, Kaggle. Available at: [https://www.kaggle.com/datasets/linzey/alcohol-consumption-us](https://www.kaggle.com/datasets/linzey/alcohol-consumption-us) (Accessed: 05 December 2024).
 
-U.S. Department of Health & Human Services \- impaired driving death rate, by age and Gender, 2012 & 2014, all States (2021) Catalog. Available at: https://catalog.data.gov/dataset/impaired-driving-death-rate-by-age-and-gender-2012-2014-all-states (Accessed: 05 December 2024).
+U.S. Department of Health & Human Services \- impaired driving death rate, by age and Gender, 2012 & 2014, all States (2021) Catalog. Available at: [https://catalog.data.gov/dataset/impaired-driving-death-rate-by-age-and-gender-2012-2014-all-states](https://catalog.data.gov/dataset/impaired-driving-death-rate-by-age-and-gender-2012-2014-all-states) (Accessed: 05 December 2024).
 
-Wong, J. (2022) Average monthly temperature by US state, Kaggle. Available at: https://www.kaggle.com/datasets/justinrwong/average-monthly-temperature-by-us-state (Accessed: 05 December 2024\)
+Wong, J. (2022) Average monthly temperature by US state, Kaggle. Available at: [https://www.kaggle.com/datasets/justinrwong/average-monthly-temperature-by-us-state](https://www.kaggle.com/datasets/justinrwong/average-monthly-temperature-by-us-state)(Accessed: 05 December 2024\)
