@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <h1>{{ site.title }}</h1>
+        <p>{{ site.description }}</p>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#data-sources">Data Sources</a></li>
+            <li><a href="#wheres-schueller">Where's Schueller</a></li>
+            <li><a href="#above-and-beyond">Above and Beyond</a></li>
+            <li><a href="#final-project">Final Project</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="content">
+        <main>
+            {{ content }}
+        </main>
+    </div>
+</body>
+</html>
