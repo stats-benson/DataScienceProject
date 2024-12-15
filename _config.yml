@@ -1,3 +1,4 @@
-remote_theme: pages-themes/midnight@v0.2.0
-title: Jacob Benson
-description: Landing Page
+theme: minima
+title: Drunk Driving Deaths Compared to Alcohol Consumption and Weather History
+description: A page created for my Data Science Final
+baseurl: "/DataScienceProject"
