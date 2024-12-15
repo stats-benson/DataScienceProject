@@ -1,5 +1,5 @@
 ## Drunk Driving Deaths Compared to Alcohol Consumption and Weather History
-Group Members: Andrew Tate and Jacob Benson
+Group Members: Andrew Tate and Myself
 
 ### Introduction
 
@@ -77,7 +77,7 @@ In this plot we see little to no correlation to high levels of wine drinking and
 
 Finally from the spirits graph, we don’t see any obvious correlation between consumption and driving deaths, even though North Dakota, Wyoming and Delaware do present this correlation. The reason I say that there isn’t any obvious correlation is because of states such as South Carolina, West Virginia, Texas, Oklahoma, Alabama, or Arkansas, which have relatively low levels of spirit consumption with higher levels of alcohol related driving fatalities. 
 
-[Link to Jacob's Colab Notebook](https://colab.research.google.com/drive/1yx-C8qmOBYUf44L6IYUxCCQr0ITAfu5X?usp=sharing) 
+[Link to My Colab Notebook](https://github.com/stats-benson/DataScienceProject/blob/main/Data_Science_Final_Project.ipynb) 
 
 ### Conclusions: 
 
