@@ -25,6 +25,7 @@ Here we can see that beer vastly outperforms all other types of alcoholic bevera
 
 I also used this dataframe to create a DUI Death Rate choropleth:  
 
+<iframe width="100%" height="600" src="https://stats-benson.github.io/DataScienceProject/plots/DeathRatePer100kByState.html" frameborder="0"></iframe>
 {% include_relative plots/DeathRatePer100kByState.html%}
 
 Here we can see that Montana, Wyoming, and North Dakota have large death rates for north states. Conversely New Mexico, Texas, Louisiana, and other southern bordering states also have large death rates. Meanwhile the middle states have relatively low rates. 
