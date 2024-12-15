@@ -1,4 +1,3 @@
-## Drunk Driving Deaths Compared to Alcohol Consumption and Weather History
 Group Members: Andrew Tate and Myself
 
 ### Introduction
