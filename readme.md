@@ -25,20 +25,20 @@ Here we can see that beer vastly outperforms all other types of alcoholic bevera
 
 I also used this dataframe to create a DUI Death Rate choropleth:  
 
-<iframe width="100%" src="https://stats-benson.github.io/DataScienceProject/plots/DeathRatePer100kByState.html"></iframe>
+{% include DeathRatePer100kByState.html%}
 
 Here we can see that Montana, Wyoming, and North Dakota have large death rates for north states. Conversely New Mexico, Texas, Louisiana, and other southern bordering states also have large death rates. Meanwhile the middle states have relatively low rates. 
 
 And Finally, Most Consumption:  
 
-{% include_relative plots/MostConsumption.html%}
+{% include MostConsumption.html%}
 
 Above we can see that northern states have lots of consumption, with Utah having virtually none. New Hampshire has a ton of consumption, for some reason. 
 
 Now the challenge was merging these values to make some meaningful connections between our data. At this point I also imported the temperature dataset. I resampled the average temperature to years instead of months, and filtered it to 2012 and 2014\. I then merged it on state. I now needed a way to represent this 2D data. My solution was to have a color gradient system. The temperature is represented by a gradient between red and blue. Blue means a state is cold, while red means a state is warm, purple would be somewhere in between. Then the color’s saturation represents some other statistic, either alcohol consumption, or death rate. For example in a choropleth that compares alcohol consumption to temperature, a dark blue state would be a heavy drinking, cold state, while a light blue state is a light drinking cold state. Conversely, a dark red state is a heavy drinking warm state and a pink state is a light drinking warm state. This allows for our edge cases to really jump out. These visualizations are shown here:   
 
-{% include_relative plots/TempAverageIntenseDrinking.html%}
-{% include_relative plots/TempAverageDUI.html%}
+{% include TempAverageIntenseDrinking.html%}
+{% include TempAverageDUI.html%}
 
 Here we can see a few interesting things. With the first visualization, we can see that people in the northern states vastly drink more than people in warm, southern states, with two exceptions in Louisiana and Florida. The bottom graph shows us equally useful info. Here we can see that there are pretty equal numbers of saturated red and blue states, telling us that the temperature of the state doesn’t seem to have an effect on the DUI death rates in that state. Here you are just as likely to die of a substance-influenced death in Montana as you are in Texas. 
 
@@ -48,7 +48,7 @@ Here we can see a few interesting things. With the first visualization, we can s
 
 I first took the data from the two datasets, merged them together, and filtered our drinking datasets for the years 2012, and 2014 (the only years provided for driving death statistics. I then created a simple choropleth for the prevalence of drinking in 2014 by states.  
 
-{% include_relative plots/AlcFreq.html%}
+{% include AlcFreq.html%}
 
 We see some general trends of drinking, with lesser drinking in the “Bible Belt” and especially in Utah.   
 Next I wanted a good way to display two quantitative variables on a locations map by state, which I first thought to do opacity of color, but then opted to go with a bubble map, with size of the bubble in each state relating to driving deaths, and the color pertaining to the level of alcohol drinking in that particular state. My first challenge was West Virginia, which had a comma separating the state name followed by a latitude longitude pair, so I made a function to remove that comma, which I could then obtain latitude and longitude pairs for the central location for each state. 
@@ -57,7 +57,7 @@ Next I wanted a good way to display two quantitative variables on a locations ma
 
 Next I used a gradient function that I found on kaggle, and edited it to include the bounds of my data length, and plotted a bubble plot for alcohol consumption vs deaths in 2014\. 
 
-{% include_relative plots/HexColorDotMap.html%}
+{% include HexColorDotMap.html%}
 
 This was fairly interesting as we didn’t see the trends that we expected to. Despite there being some areas of higher level of drinking associated with higher levels of drunk driving fatalities, in areas such as West Virginia, South Carolina, and Louisiana, we see a fairly high level of drunk driving fatalities with a fairly low level of drinking. Similarly, we see a fairly low rate of drunk driving fatalities with a high level of drinking in Arizona and New Hampshire.   
 
@@ -65,7 +65,7 @@ This was fairly interesting as we didn’t see the trends that we expected to. D
 
  Next I wanted to make bubble plots with a slider for the type of alcohol (beer, spirits, wine) for the color, and the alcohol related driving fatalities as the size of the bubble, to see if there are any obvious correlations between a specific kind of alcohol and driving deaths.   
 
-{% include_relative plots/TypeAlcohol.html%}
+{% include TypeAlcohol.html%}
 
 In this plot we can see a correlation between alcohol level and driving deaths with the aforementioned Louisiana and South Carolina having a fairly high level of beer drinking compared to the rest of the United States, which appears to be in greater relation to the higher level of driving deaths. This trend is visible around the country, with high levels of deaths in states such as North Dakota, Montana, South Dakota, all of which record high levels of beer drinking. There are, however, some exceptions like New Hampshire, Nevada, Arkansas, which have either high levels of beer drinking or high levels of deaths, but not both.   
 
